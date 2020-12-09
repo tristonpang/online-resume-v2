@@ -44,7 +44,7 @@ const useStyles = makeStyles(() => createStyles({
 const About = () => {
   const classes = useStyles();
   return (
-    <Box className={classes.container}>
+    <Box className={classes.container} id='about'>
       <Box className={classes.textContainer}>
         <Typography variant='h4' className={`${classes.text} ${classes.title}`}>Hi there!</Typography>
         <Typography className={classes.text}>

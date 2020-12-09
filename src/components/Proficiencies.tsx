@@ -14,7 +14,7 @@ const Proficiencies = () => {
   const classes = useStyles();
   return (
     <>
-      <Typography variant='h3' className={classes.title}><strong>Proficiencies</strong></Typography>
+      <Typography id='proficiencies' variant='h3' className={classes.title}><strong>Proficiencies</strong></Typography>
       <ProficiencyTable label='Programming' data={programming} />
       <ProficiencyTable label='Web' data={web} />
       <ProficiencyTable label='Mobile' data={mobile} />

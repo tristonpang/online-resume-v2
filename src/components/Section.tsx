@@ -24,13 +24,14 @@ const useStyles = makeStyles(() => createStyles({
 }));
 
 interface SectionProps {
+  id: string;
   sectionTitle: string;
   content: ExperienceCardProps[];
   useProjectCards?: boolean;
 }
 
 const Section = (props: SectionProps) => {
-  const { sectionTitle, content, useProjectCards } = props;
+  const { sectionTitle, content, useProjectCards, id } = props;
   const classes = useStyles();
 
   const renderCards = (contentList: ExperienceCardProps[]) => {
@@ -45,7 +46,7 @@ const Section = (props: SectionProps) => {
   }
 
   return (
-    <Box className={classes.container}>
+    <Box className={classes.container} id={id}>
       <Typography variant='h3' className={classes.sectionTitle}><strong>{sectionTitle}</strong></Typography>
       {renderCards(content)}
       <hr className={classes.divider} />

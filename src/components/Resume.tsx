@@ -28,9 +28,9 @@ const Resume = () => {
   const classes = useStyles();
   return (
     <Box className={classes.container}>
-      <Section sectionTitle='Work Experience' content={work} />
-      <Section sectionTitle='Education' content={education} />
-      <Section sectionTitle='Projects & Extra-curricular' content={projects} useProjectCards />
+      <Section id='work' sectionTitle='Work Experience' content={work} />
+      <Section id='education' sectionTitle='Education' content={education} />
+      <Section id='projects' sectionTitle='Projects & Extra-curricular' content={projects} useProjectCards />
       <Proficiencies />
     </Box>
   );
