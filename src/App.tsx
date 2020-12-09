@@ -3,8 +3,9 @@ import './App.css';
 import Particles from 'react-tsparticles';
 import Intro from './components/Intro';
 import Resume from './components/Resume';
-import { createMuiTheme, createStyles, makeStyles, ThemeProvider } from '@material-ui/core';
+import { createMuiTheme, createStyles, makeStyles, ThemeProvider, Typography } from '@material-ui/core';
 import About from './components/About';
+import NavBar from './components/NavBar';
 
 const useStyles = makeStyles(() => createStyles({
   contentContainer: {
@@ -100,6 +101,7 @@ function App() {
           detectRetina: true,
         }}
       />
+      <NavBar />
       <div className={classes.contentContainer}>
         <Intro />
         <About />
