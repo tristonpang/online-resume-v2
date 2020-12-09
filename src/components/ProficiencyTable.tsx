@@ -24,8 +24,8 @@ const ProficiencyTable = (props: ProficiencyTableProps) => {
   const renderDataRows = () => {
     return data.map(dataItem => (
       <TableRow>
-        <TableCell align='center'>{dataItem.skill}</TableCell>
-        <TableCell align='center'>{levelMapping[dataItem.level]}</TableCell>
+        <TableCell align='left'>{dataItem.skill}</TableCell>
+        <TableCell align='right'>{levelMapping[dataItem.level]}</TableCell>
       </TableRow>
     ));
   };
@@ -37,10 +37,7 @@ const ProficiencyTable = (props: ProficiencyTableProps) => {
           <TableRow>
             <TableCell colSpan={2} align="center">{label}</TableCell>
           </TableRow>
-          <TableRow>
-            <TableCell align='center'>Skill</TableCell>
-            <TableCell align='center'>Proficiency Level</TableCell>
-          </TableRow>
+          
         </TableHead>
         <TableBody>
           {renderDataRows()}

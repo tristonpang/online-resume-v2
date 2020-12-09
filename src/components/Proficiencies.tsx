@@ -6,8 +6,7 @@ import ProficiencyTable from './ProficiencyTable';
 
 const useStyles = makeStyles(() => createStyles({
   title: {
-    textDecoration: 'underline',
-    marginBottom: 100
+    marginBottom: 90
   },
 }));
 

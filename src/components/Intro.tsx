@@ -13,6 +13,7 @@ const useStyles = makeStyles(() => createStyles({
   text: {
     color: '#fff',
     textAlign: 'center',
+    fontFamily: 'Poppins',
   },
   container: {
     display: 'flex',

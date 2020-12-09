@@ -42,7 +42,7 @@ export const work = [
   },
   {
     image: NebTreeLogo,
-    title: 'NebulasTree Private Limited',
+    title: 'NebulasTree',
     subtitle: "Software Developer Intern",
     duration: 'Dec 2018 - Jan 2019',
     description: 'NebulasTree is a start-up that specialises in software engineering and cybersecurity. In my time as an intern there, I was tasked to develop a One-Time Password (OTP) mobile authenticator system for iOS platforms. In the span of a month, I created from scratch the client-side aspect of the system, despite being unfamiliar with Swift and Xcode. I think on my feet, and I took up this job to challenge myself and learn something new in a short period of time.',

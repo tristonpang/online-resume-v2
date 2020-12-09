@@ -6,8 +6,7 @@ import ProjectCard from './ProjectCard';
 
 const useStyles = makeStyles(() => createStyles({
   sectionTitle: {
-    textDecoration: 'underline',
-    marginBottom: 100
+    marginBottom: 90
   },
   container: {
     display: 'flex',
@@ -15,6 +14,12 @@ const useStyles = makeStyles(() => createStyles({
     alignItems: 'center',
     flexDirection: 'column',
     marginBottom: 100
+  },
+  divider: {
+    color: '#000',
+    backgroundColor: '#000',
+    height: 1,
+    width: '90%',
   }
 }));
 
@@ -43,6 +48,7 @@ const Section = (props: SectionProps) => {
     <Box className={classes.container}>
       <Typography variant='h3' className={classes.sectionTitle}><strong>{sectionTitle}</strong></Typography>
       {renderCards(content)}
+      <hr className={classes.divider} />
     </Box>
   );
 };

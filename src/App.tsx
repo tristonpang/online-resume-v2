@@ -3,7 +3,8 @@ import './App.css';
 import Particles from 'react-tsparticles';
 import Intro from './components/Intro';
 import Resume from './components/Resume';
-import { createStyles, makeStyles } from '@material-ui/core';
+import { createMuiTheme, createStyles, makeStyles, ThemeProvider } from '@material-ui/core';
+import About from './components/About';
 
 const useStyles = makeStyles(() => createStyles({
   contentContainer: {
@@ -13,10 +14,16 @@ const useStyles = makeStyles(() => createStyles({
 
 }));
 
+const theme = createMuiTheme({
+  typography: {
+    fontFamily: 'Poppins',
+  },
+});
+
 function App() {
   const classes = useStyles();
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <Particles
         id="tsparticles"
         options={{
@@ -95,10 +102,10 @@ function App() {
       />
       <div className={classes.contentContainer}>
         <Intro />
+        <About />
         <Resume />
       </div>
-    </>
-
+    </ThemeProvider>
   );
 }
 
