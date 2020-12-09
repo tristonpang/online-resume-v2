@@ -1,11 +1,15 @@
-import classes from '*.module.css';
-import { Box, createStyles, makeStyles } from '@material-ui/core';
+import { Box, createStyles, makeStyles, } from '@material-ui/core';
 import React from 'react';
 
+import Section from './Section';
+
+import { education, projects, work } from '../data/content';
+import Proficiencies from './Proficiencies';
+
 const useStyles = makeStyles(() => createStyles({
-  text: {
-    color: '#fff',
-    fontSize: 64,
+  sectionTitle: {
+    textDecoration: 'underline',
+    marginBottom: 100
   },
   container: {
     display: 'flex',
@@ -13,7 +17,10 @@ const useStyles = makeStyles(() => createStyles({
     alignItems: 'center',
     flexDirection: 'column',
     backgroundColor: '#fff',
-    height: 1000, //testing
+    paddingLeft: '20%',
+    paddingRight: '20%',
+    paddingTop: '10%',
+    paddingBottom: '10%',
   }
 }));
 
@@ -21,7 +28,10 @@ const Resume = () => {
   const classes = useStyles();
   return (
     <Box className={classes.container}>
-      Testing
+      <Section sectionTitle='Work Experience' content={work} />
+      <Section sectionTitle='Education' content={education} />
+      <Section sectionTitle='Projects & Extra-curricular' content={projects} useProjectCards />
+      <Proficiencies />
     </Box>
   );
 };
