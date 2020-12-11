@@ -46,11 +46,25 @@ const FlashingName = styled(Typography)`
   animation: ${flashAnimation} 0.1s 3 linear;
 `
 
+const fadeInAnimation = keyframes`
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+`
+
+const FadeInArrow = styled(KeyboardArrowDownIcon)`
+  animation: ${fadeInAnimation} 1s linear;
+`
+
 const Intro = () => {
   const [isRenderIntro, setIsRenderIntro] = useState<boolean>(false);
+  const [isRenderArrow, setIsRenderArrow] = useState<boolean>(false);
 
   useEffect(() => {
     setTimeout(() => setIsRenderIntro(true), 1000)
+  }, []);
+
+  useEffect(() => {
+    setTimeout(() => setIsRenderArrow(true), 1500)
   }, []);
 
   const classes = useStyles();
@@ -64,6 +78,8 @@ const Intro = () => {
             <Typography className={`${classes.text} ${classes.subtitle}`}>Full-stack Software Developer</Typography>
           </Typist>
         </div>
+      </>)}
+      {isRenderArrow && (
         <Link
           activeClass="active"
           to="about"
@@ -73,9 +89,9 @@ const Intro = () => {
           duration={500}
           className={classes.arrowButton}
         >
-          <KeyboardArrowDownIcon className={classes.arrow} />
+          <FadeInArrow className={classes.arrow} />
         </Link>
-      </>)}
+      )}
     </Box>
   );
 };
