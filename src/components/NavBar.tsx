@@ -3,7 +3,7 @@ import { AppBar, Box, Button, createStyles, IconButton, makeStyles, Slide, Toolb
 import MailIcon from '@material-ui/icons/Mail';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import { Link, animateScroll as scroll } from 'react-scroll';
+import { Link } from 'react-scroll';
 
 function AppearOnScroll(props: { children: React.ReactElement }) {
   const { children } = props;

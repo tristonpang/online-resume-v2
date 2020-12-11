@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { makeStyles, createStyles, Typography, Box } from '@material-ui/core';
 import styled, { keyframes } from 'styled-components';
 import Typist from 'react-typist';
+import { Link } from 'react-scroll';
+import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 
 const useStyles = makeStyles(() => createStyles({
   name: {
@@ -24,6 +26,14 @@ const useStyles = makeStyles(() => createStyles({
   },
   typistContainer: {
     height: 20,
+  },
+  arrowButton: {
+    position: 'absolute',
+    top: '85vh',
+  },
+  arrow: {
+    color: '#fff',
+    fontSize: 64,
   }
 }));
 
@@ -54,6 +64,17 @@ const Intro = () => {
             <Typography className={`${classes.text} ${classes.subtitle}`}>Full-stack Software Developer</Typography>
           </Typist>
         </div>
+        <Link
+          activeClass="active"
+          to="about"
+          spy={true}
+          smooth={true}
+          offset={-50}
+          duration={500}
+          className={classes.arrowButton}
+        >
+          <KeyboardArrowDownIcon className={classes.arrow} />
+        </Link>
       </>)}
     </Box>
   );
