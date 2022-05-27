@@ -1,11 +1,20 @@
-import React from 'react';
 import './App.css';
+
+import React from 'react';
+
 import Particles from 'react-tsparticles';
-import Intro from './components/Intro';
-import Resume from './components/Resume';
-import { createMuiTheme, createStyles, makeStyles, ThemeProvider, Typography } from '@material-ui/core';
+
+import {
+  createMuiTheme,
+  createStyles,
+  makeStyles,
+  ThemeProvider,
+} from '@material-ui/core';
+
 import About from './components/About';
+import Intro from './components/Intro';
 import NavBar from './components/NavBar';
+import Resume from './components/Resume';
 
 const useStyles = makeStyles(() => createStyles({
   contentContainer: {
@@ -23,6 +32,7 @@ const theme = createMuiTheme({
 
 function App() {
   const classes = useStyles();
+  // console.log(isMobile());
   return (
     <ThemeProvider theme={theme}>
       <Particles
