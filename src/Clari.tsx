@@ -13,7 +13,6 @@ import {
 
 import About from './components/About';
 import Intro from './components/Intro';
-import NavBar from './components/NavBar';
 
 const useStyles = makeStyles(() => createStyles({
   contentContainer: {
@@ -38,8 +37,9 @@ function Clari() { // TODO: change background to stars
         options={{
           background: {
             color: {
-              value: "#000",
-            },
+              value: '#000'
+            }
+            // image: './resources/images/star-bg.jpg'
           },
           backgroundMode: {
             enable: true,
@@ -50,42 +50,35 @@ function Clari() { // TODO: change background to stars
             events: {
               resize: true,
             },
-            modes: {
-              bubble: {
-                distance: 400,
-                duration: 2,
-                opacity: 0.8,
-                size: 40,
-              },
-              push: {
-                quantity: 4,
-              },
-              repulse: {
-                distance: 200,
-                duration: 0.4,
-              },
-            },
+            // modes: {
+            //   bubble: {
+            //     distance: 400,
+            //     duration: 2,
+            //     opacity: 0.8,
+            //     size: 40,
+            //   },
+            //   push: {
+            //     quantity: 4,
+            //   },
+            //   repulse: {
+            //     distance: 200,
+            //     duration: 0.4,
+            //   },
+            // },
           },
           particles: {
             color: {
               value: "#ffffff",
             },
-            links: {
-              color: "#ffffff",
-              distance: 150,
-              enable: true,
-              opacity: 0.5,
-              width: 1,
-            },
             collisions: {
-              enable: true,
+              enable: false,
             },
             move: {
               direction: "none",
               enable: true,
               outMode: "bounce",
               random: false,
-              speed: 3,
+              speed: 0.2,
               straight: false,
             },
             number: {
@@ -93,23 +86,28 @@ function Clari() { // TODO: change background to stars
                 enable: true,
                 value_area: 800,
               },
-              value: 80,
+              value: 100,
             },
             opacity: {
-              value: 0.5,
+              value: 1,
             },
             shape: {
               type: "circle",
+              // options: {
+              //   image: {
+              //     src: './resources/icons/star.jpg'
+              //   }
+              // }
             },
             size: {
               random: true,
-              value: 5,
+              value: 2.5,
             },
           },
           detectRetina: true,
         }}
       />
-      <NavBar />
+      {/* <NavBar /> */}
       <div className={classes.contentContainer}>
         <Intro />
         <About />
