@@ -1,8 +1,14 @@
 import React from 'react';
-import { Box, createStyles, makeStyles, Typography } from '@material-ui/core';
+
+import {
+  Box,
+  createStyles,
+  makeStyles,
+  Typography,
+} from '@material-ui/core';
 
 export interface ExperienceCardProps {
-  image: string;
+  image?: string;
   title: string;
   subtitle: string;
   duration: string;

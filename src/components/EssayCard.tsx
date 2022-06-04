@@ -7,7 +7,12 @@ import {
   Typography,
 } from '@material-ui/core';
 
-import { ExperienceCardProps } from './ExperienceCard';
+export interface EssayCardProps {
+  title: string;
+  subtitle: string;
+  content: string;
+  date?: string;
+}
 
 const useStyles = makeStyles(() => createStyles({
   container: {
@@ -28,22 +33,24 @@ const useStyles = makeStyles(() => createStyles({
     width: '75%',
     marginBottom: 16
   },
-  description: {
+  content: {
     marginTop: 16,
   }
 }));
 
-const ProjectCard = (props: ExperienceCardProps) => {
-  const { image, title, subtitle, duration, description } = props;
+const EssayCard = (props: EssayCardProps) => {
+  const { title, subtitle, content } = props;
   const classes = useStyles();
+  const splitContent = content.split('\n');
   return (
     <Box className={classes.container}>
-      <img className={classes.image} src={image} alt='' />
       <Typography variant='h5'><strong>{title}</strong></Typography>
-      <Typography><em>{subtitle}</em>{'  |  ' + duration}</Typography>
-      <Typography className={classes.description} align='justify'>{description}</Typography>
+      <Typography><em>{subtitle}</em></Typography>
+      {splitContent.map((essayParagraph) => (
+        <Typography className={classes.content} align='justify'>{essayParagraph}</Typography>
+      ))}
     </Box>
   );
 };
 
-export default ProjectCard;
+export default EssayCard;

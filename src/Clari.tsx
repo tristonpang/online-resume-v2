@@ -12,7 +12,8 @@ import {
 } from '@material-ui/core';
 
 import About from './components/About';
-import IntroClari from './components/ClariIntro';
+import ClariContent from './components/ClariContent';
+import ClariIntro from './components/ClariIntro';
 
 const useStyles = makeStyles(() => createStyles({
   contentContainer: {
@@ -109,8 +110,9 @@ function Clari() { // TODO: change background image to night sky if possible
       />
       {/* <NavBar /> */}
       <div className={classes.contentContainer}>
-        <IntroClari />
+        <ClariIntro />
         <About />
+        <ClariContent />
       </div>
     </ThemeProvider>
   );

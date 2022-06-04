@@ -1,10 +1,13 @@
-import { Box, createStyles, makeStyles, } from '@material-ui/core';
 import React from 'react';
 
-import Section from './Section';
+import {
+  Box,
+  createStyles,
+  makeStyles,
+} from '@material-ui/core';
 
-import { education, projects, work } from '../data/content';
-import Proficiencies from './Proficiencies';
+import { clariContent } from '../data/clariContent';
+import Section from './Section';
 
 const useStyles = makeStyles(() => createStyles({
   sectionTitle: {
@@ -24,16 +27,14 @@ const useStyles = makeStyles(() => createStyles({
   }
 }));
 
-const Resume = () => {
+const ClariContent = () => {
   const classes = useStyles();
   return (
     <Box className={classes.container}>
-      <Section id='work' sectionTitle='Work Experience' content={work} />
-      <Section id='education' sectionTitle='Education' content={education} />
-      <Section id='projects' sectionTitle='Projects & Extra-curricular' content={projects} useProjectCards />
-      <Proficiencies />
+      {/* TODO: add picture scroller here */}
+      <Section id='content' sectionTitle='This is Clari...' content={clariContent} useEssayCards />
     </Box>
   );
 };
 
-export default Resume;
+export default ClariContent;
