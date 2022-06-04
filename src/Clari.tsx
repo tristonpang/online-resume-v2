@@ -12,7 +12,7 @@ import {
 } from '@material-ui/core';
 
 import About from './components/About';
-import Intro from './components/Intro';
+import IntroClari from './components/ClariIntro';
 
 const useStyles = makeStyles(() => createStyles({
   contentContainer: {
@@ -28,7 +28,7 @@ const theme = createMuiTheme({
   },
 });
 
-function Clari() { // TODO: change background to stars
+function Clari() { // TODO: change background image to night sky if possible
   const classes = useStyles();
   return (
     <ThemeProvider theme={theme}>
@@ -109,7 +109,7 @@ function Clari() { // TODO: change background to stars
       />
       {/* <NavBar /> */}
       <div className={classes.contentContainer}>
-        <Intro />
+        <IntroClari />
         <About />
       </div>
     </ThemeProvider>
