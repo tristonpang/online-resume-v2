@@ -75,9 +75,9 @@ function Clari() { // TODO: change background image to night sky if possible
               enable: false,
             },
             move: {
-              direction: "none",
+              direction: "right",
               enable: true,
-              outMode: "bounce",
+              outMode: "out",
               random: false,
               speed: 0.2,
               straight: false,
