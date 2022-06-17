@@ -15,6 +15,8 @@ import About from './components/About';
 import ClariContent from './components/ClariContent';
 import ClariIntro from './components/ClariIntro';
 
+// import StarBg from './resources/backgrounds/star-bg-resized.jpg';
+
 const useStyles = makeStyles(() => createStyles({
   contentContainer: {
     paddingLeft: '16%',
@@ -27,6 +29,15 @@ const theme = createMuiTheme({
   typography: {
     fontFamily: 'Poppins',
   },
+  // overrides: {
+  //   MuiCssBaseline: {
+  //     "@global": {
+  //       body: {
+  //         backgroundImage: `url(${StarBg})`
+  //       }
+  //     }
+  //   }
+  // },
 });
 
 function Clari() { // TODO: change background image to night sky if possible
@@ -38,9 +49,10 @@ function Clari() { // TODO: change background image to night sky if possible
         options={{
           background: {
             color: {
-              value: '#000'
-            }
-            // image: './resources/images/star-bg.jpg'
+              value: '#141E30'
+            },
+            // opacity: 1,
+            // image: './resources/backgrounds/star-bg-resized.jpg'
           },
           backgroundMode: {
             enable: true,
@@ -79,15 +91,15 @@ function Clari() { // TODO: change background image to night sky if possible
               enable: true,
               outMode: "out",
               random: false,
-              speed: 0.2,
+              speed: 0.15,
               straight: false,
             },
             number: {
               density: {
                 enable: true,
-                value_area: 800,
+                value_area: 1000,
               },
-              value: 100,
+              value: 200,
             },
             opacity: {
               value: 1,
