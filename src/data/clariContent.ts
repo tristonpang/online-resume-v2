@@ -25,7 +25,7 @@
 
 export const clariContent = [
   {
-    title: '...someone I hold so dear to my heart',
+    title: 'Meet Clari',
     subtitle: 'My love, my joy, my blessing',
     content: `
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non commodo arcu, vel iaculis purus. In quis congue purus. In sed ante nec urna commodo iaculis. Donec ac vulputate leo. Quisque lectus mi, porta eu aliquam quis, condimentum tempus purus. In ipsum purus, tempor eget lobortis ac, tincidunt non nisi. Pellentesque tincidunt, nunc sed ullamcorper efficitur, nunc ipsum varius urna, id lobortis ipsum lorem malesuada enim.

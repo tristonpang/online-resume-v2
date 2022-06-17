@@ -8,6 +8,7 @@ import {
   Box,
   createStyles,
   makeStyles,
+  Typography,
 } from '@material-ui/core';
 
 import { clariContent } from '../data/clariContent';
@@ -21,17 +22,16 @@ import DoughPhoto from '../resources/images/claritris_dough.jpeg';
 import FilmLaughPhoto from '../resources/images/claritris_filmlaugh_50.jpg';
 import FirstPhoto from '../resources/images/claritris_first.jpeg';
 import GbtbPhoto from '../resources/images/claritris_gbtb.jpeg';
+import Reflection1Photo from '../resources/images/claritris_reflection1.jpeg';
+import Reflection2Photo from '../resources/images/claritris_reflection2.jpeg';
+import Reflection3Photo from '../resources/images/claritris_reflection3.jpeg';
+import Reflection4Photo from '../resources/images/claritris_reflection4.jpeg';
 import BdayPhoto from '../resources/images/claritris_umbrella_50.jpg';
 import UmbrellaPhoto from '../resources/images/claritris_umbrella_50.jpg';
 // import GradPhoto from '../resources/images/claritris_grad.jpeg';
 // import LungsPhoto from '../resources/images/claritris_lungs.jpeg';
 // import MilligramPhoto from '../resources/images/claritris_milligram.jpeg';
 // import PotteryPhoto from '../resources/images/claritris_pottery.jpeg';
-// import Reflection1Photo from '../resources/images/claritris_reflection1.jpeg
-// ';
-// import Reflection2Photo from '../resources/images/claritris_reflection2.jpeg';
-// import Reflection3Photo from '../resources/images/claritris_reflection3.jpeg';
-// import Reflection4Photo from '../resources/images/claritris_reflection4.jpeg';
 // import SelfiePhoto from '../resources/images/claritris_selfie.jpeg';
 // import SelfieNaturePhoto from '../resources/images/claritris_selfienature.jpeg';
 import Section from './Section';
@@ -55,8 +55,16 @@ const useStyles = makeStyles(() => createStyles({
   gallery: {
     width: '100%',
     marginBottom: '10%'
+  },
+  psText: {
+    marginBottom: '5%'
   }
 }));
+
+const imageDimensions = {
+  originalHeight: 500,
+  thumbnailHeight: 50
+}
 
 const images = [
   {
@@ -133,13 +141,37 @@ const images = [
   },
 ];
 
+const reflectionImages = [
+  {
+    original: Reflection1Photo,
+    thumbnail: Reflection1Photo,
+    ...imageDimensions,
+  },
+  {
+    original: Reflection2Photo,
+    thumbnail: Reflection2Photo,
+    ...imageDimensions,
+  },
+  {
+    original: Reflection3Photo,
+    thumbnail: Reflection3Photo,
+    ...imageDimensions,
+  },
+  {
+    original: Reflection4Photo,
+    thumbnail: Reflection4Photo,
+    ...imageDimensions,
+  },
+];
+
 const ClariContent = () => {
   const classes = useStyles();
   return (
     <Box className={classes.container}>
-      {/* TODO: add picture scroller here */}
       <ImageGallery additionalClass={classes.gallery} items={images} autoPlay />
-      <Section id='content' sectionTitle='This is Clari...' content={clariContent} useEssayCards />
+      <Section id='content' sectionTitle='' content={clariContent} useEssayCards />
+      <Typography className={classes.psText}>{'(we also really like reflections)'}</Typography>
+      <ImageGallery additionalClass={classes.gallery} items={reflectionImages} autoPlay />
     </Box>
   );
 };

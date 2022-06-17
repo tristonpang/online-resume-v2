@@ -61,7 +61,7 @@ const Section = (props: SectionProps) => {
 
   return (
     <Box className={classes.container} id={id}>
-      <Typography variant='h3' className={classes.sectionTitle}><strong>{sectionTitle}</strong></Typography>
+      {props.sectionTitle !== '' && <Typography variant='h3' className={classes.sectionTitle}><strong>{sectionTitle}</strong></Typography>}
       {renderCards(content)}
       <hr className={classes.divider} />
     </Box>
