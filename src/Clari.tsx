@@ -1,0 +1,133 @@
+import './App.css'; // TODO: separate css files
+
+import React from 'react';
+
+import Particles from 'react-tsparticles';
+
+import {
+  createMuiTheme,
+  createStyles,
+  makeStyles,
+  ThemeProvider,
+} from '@material-ui/core';
+
+import ClariAbout from './components/ClariAbout';
+import ClariContent from './components/ClariContent';
+import ClariIntro from './components/ClariIntro';
+
+// import StarBg from './resources/backgrounds/star-bg-resized.jpg';
+
+const useStyles = makeStyles(() => createStyles({
+  contentContainer: {
+    paddingLeft: '16%',
+    paddingRight: '16%',
+  }
+
+}));
+
+const theme = createMuiTheme({
+  typography: {
+    fontFamily: 'Poppins',
+  },
+  // overrides: {
+  //   MuiCssBaseline: {
+  //     "@global": {
+  //       body: {
+  //         backgroundImage: `url(${StarBg})`
+  //       }
+  //     }
+  //   }
+  // },
+});
+
+function Clari() { // TODO: change background image to night sky if possible
+  const classes = useStyles();
+  return (
+    <ThemeProvider theme={theme}>
+      <Particles
+        id="tsparticles"
+        options={{
+          background: {
+            color: {
+              value: '#141E30'
+            },
+            // opacity: 1,
+            // image: './resources/backgrounds/star-bg-resized.jpg'
+          },
+          backgroundMode: {
+            enable: true,
+          },
+          fpsLimit: 60,
+          interactivity: {
+            detectsOn: "canvas",
+            events: {
+              resize: true,
+            },
+            // modes: {
+            //   bubble: {
+            //     distance: 400,
+            //     duration: 2,
+            //     opacity: 0.8,
+            //     size: 40,
+            //   },
+            //   push: {
+            //     quantity: 4,
+            //   },
+            //   repulse: {
+            //     distance: 200,
+            //     duration: 0.4,
+            //   },
+            // },
+          },
+          particles: {
+            color: {
+              value: "#ffffff",
+            },
+            collisions: {
+              enable: false,
+            },
+            move: {
+              direction: "right",
+              enable: true,
+              outMode: "out",
+              random: false,
+              speed: 0.15,
+              straight: false,
+            },
+            number: {
+              density: {
+                enable: true,
+                value_area: 1000,
+              },
+              value: 200,
+            },
+            opacity: {
+              value: 1,
+            },
+            shape: {
+              type: "circle",
+              // options: {
+              //   image: {
+              //     src: './resources/icons/star.jpg'
+              //   }
+              // }
+            },
+            size: {
+              random: true,
+              value: 2.5,
+            },
+          },
+          detectRetina: true,
+        }}
+      />
+      {/* <NavBar /> */}
+      <div className={classes.contentContainer}>
+        <ClariIntro />
+        <ClariAbout />
+        <ClariContent />
+      </div>
+    </ThemeProvider>
+  );
+}
+
+export default Clari;
