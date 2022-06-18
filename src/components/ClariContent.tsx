@@ -22,18 +22,18 @@ import DoughPhoto from '../resources/images/claritris_dough.jpeg';
 import FilmLaughPhoto from '../resources/images/claritris_filmlaugh_50.jpg';
 import FirstPhoto from '../resources/images/claritris_first.jpeg';
 import GbtbPhoto from '../resources/images/claritris_gbtb.jpeg';
+import GradPhoto from '../resources/images/claritris_grad.jpeg';
+import LungsPhoto from '../resources/images/claritris_lungs.jpeg';
+import MilligramPhoto from '../resources/images/claritris_milligram.jpeg';
+import PotteryPhoto from '../resources/images/claritris_pottery.jpeg';
 import Reflection1Photo from '../resources/images/claritris_reflection1.jpeg';
 import Reflection2Photo from '../resources/images/claritris_reflection2.jpeg';
 import Reflection3Photo from '../resources/images/claritris_reflection3.jpeg';
 import Reflection4Photo from '../resources/images/claritris_reflection4.jpeg';
+import SelfiePhoto from '../resources/images/claritris_selfie.jpeg';
+import SelfieNaturePhoto from '../resources/images/claritris_selfienature.jpeg';
 import BdayPhoto from '../resources/images/claritris_umbrella_50.jpg';
 import UmbrellaPhoto from '../resources/images/claritris_umbrella_50.jpg';
-// import GradPhoto from '../resources/images/claritris_grad.jpeg';
-// import LungsPhoto from '../resources/images/claritris_lungs.jpeg';
-// import MilligramPhoto from '../resources/images/claritris_milligram.jpeg';
-// import PotteryPhoto from '../resources/images/claritris_pottery.jpeg';
-// import SelfiePhoto from '../resources/images/claritris_selfie.jpeg';
-// import SelfieNaturePhoto from '../resources/images/claritris_selfienature.jpeg';
 import Section from './Section';
 
 const useStyles = makeStyles(() => createStyles({
@@ -136,6 +136,42 @@ const images = [
   {
     original: GbtbPhoto,
     thumbnail: GbtbPhoto,
+    originalHeight: 500,
+    thumbnailHeight: 50
+  },
+  {
+    original: GradPhoto,
+    thumbnail: GradPhoto,
+    originalHeight: 500,
+    thumbnailHeight: 50
+  },
+  {
+    original: LungsPhoto,
+    thumbnail: LungsPhoto,
+    originalHeight: 500,
+    thumbnailHeight: 50
+  },
+  {
+    original: MilligramPhoto,
+    thumbnail: MilligramPhoto,
+    originalHeight: 500,
+    thumbnailHeight: 50
+  },
+  {
+    original: SelfiePhoto,
+    thumbnail: SelfiePhoto,
+    originalHeight: 500,
+    thumbnailHeight: 50
+  },
+  {
+    original: SelfieNaturePhoto,
+    thumbnail: SelfieNaturePhoto,
+    originalHeight: 500,
+    thumbnailHeight: 50
+  },
+  {
+    original: PotteryPhoto,
+    thumbnail: PotteryPhoto,
     originalHeight: 500,
     thumbnailHeight: 50
   },
