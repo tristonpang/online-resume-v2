@@ -1,8 +1,18 @@
-import React, { useEffect, useState } from 'react';
-import { makeStyles, createStyles, Typography, Box } from '@material-ui/core';
-import styled, { keyframes } from 'styled-components';
-import Typist from 'react-typist';
+import React, {
+  useEffect,
+  useState,
+} from 'react';
+
 import { Link } from 'react-scroll';
+import Typist from 'react-typist';
+import styled, { keyframes } from 'styled-components';
+
+import {
+  Box,
+  createStyles,
+  makeStyles,
+  Typography,
+} from '@material-ui/core';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 
 const useStyles = makeStyles(() => createStyles({
@@ -75,7 +85,7 @@ const Intro = () => {
         <div className={classes.typistContainer}>
           <Typist cursor={{ element: '_' }}>
             <Typist.Delay ms={500} />
-            <Typography className={`${classes.text} ${classes.subtitle}`}>Full-stack Software Developer</Typography>
+            <Typography className={`${classes.text} ${classes.subtitle}`}>Fullstack Software Developer</Typography>
           </Typist>
         </div>
       </>)}
