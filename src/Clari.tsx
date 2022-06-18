@@ -11,7 +11,7 @@ import {
   ThemeProvider,
 } from '@material-ui/core';
 
-import About from './components/About';
+import ClariAbout from './components/ClariAbout';
 import ClariContent from './components/ClariContent';
 import ClariIntro from './components/ClariIntro';
 
@@ -123,7 +123,7 @@ function Clari() { // TODO: change background image to night sky if possible
       {/* <NavBar /> */}
       <div className={classes.contentContainer}>
         <ClariIntro />
-        <About />
+        <ClariAbout />
         <ClariContent />
       </div>
     </ThemeProvider>
