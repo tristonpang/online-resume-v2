@@ -1,40 +1,61 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import './App.css';
 import Particles from 'react-tsparticles';
+import type { Container, Engine } from "tsparticles-engine";
+import { loadFull } from "tsparticles";
+
 import Intro from './components/Intro';
 import Resume from './components/Resume';
-import { createMuiTheme, createStyles, makeStyles, ThemeProvider, Typography } from '@material-ui/core';
+import { createTheme, createStyles, makeStyles, ThemeProvider } from '@material-ui/core';
 import About from './components/About';
 import NavBar from './components/NavBar';
+import CssBaseline from "@material-ui/core/CssBaseline";
 
 const useStyles = makeStyles(() => createStyles({
   contentContainer: {
     paddingLeft: '16%',
     paddingRight: '16%',
+  },
+  particlesContainer: {
+    zIndex: -10,
+    position: "fixed",
   }
 
 }));
 
-const theme = createMuiTheme({
+const theme = createTheme({
   typography: {
     fontFamily: 'Poppins',
   },
+  palette: {
+    background: {
+      default: '#000',
+    }
+  }
 });
 
 function App() {
   const classes = useStyles();
+  const particlesInit = useCallback(async (engine: Engine) => {
+    console.log(engine);
+    await loadFull(engine);
+  }, []);
+
+  const particlesLoaded = useCallback(async (container: Container | undefined) => {
+    await console.log(container);
+  }, []);
+
   return (
     <ThemeProvider theme={theme}>
+      <CssBaseline />
       <Particles
         id="tsparticles"
+        init={particlesInit}
+        loaded={particlesLoaded}
+        className={classes.particlesContainer}
         options={{
-          background: {
-            color: {
-              value: "#000",
-            },
-          },
-          backgroundMode: {
-            enable: true,
+          fullScreen: {
+            enable: true
           },
           fpsLimit: 60,
           interactivity: {
