@@ -96,9 +96,9 @@ function App() {
             move: {
               direction: "none",
               enable: true,
-              outMode: "bounce",
+              outMode: "out",
               random: false,
-              speed: 3,
+              speed: 2,
               straight: false,
             },
             number: {
