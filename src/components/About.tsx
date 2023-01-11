@@ -48,7 +48,7 @@ const About = () => {
       <Box className={classes.textContainer}>
         <Typography variant='h4' className={`${classes.text} ${classes.title}`}>Hi there!</Typography>
         <Typography className={classes.text}>
-          I am a final year Computer Science undergraduate from the National University of Singapore (NUS). While I formally specialise in Software Engineering and Database Systems, I have worked on a range of projects with differing requirements and skill sets.
+          I am a software engineer with a specialisation in Software Engineering and Database Systems. Besides these fields, I have worked on a range of projects with differing requirements and skill sets.
           I have worked on software in both front-end and back-end developer roles, and have experience in setting up CI/CD pipelines and in some DevOps as well.
           <br />
           <br />
