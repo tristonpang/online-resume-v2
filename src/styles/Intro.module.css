@@ -39,7 +39,15 @@
   and (min-device-width: 200px) 
   and (max-device-width: 736px) {
     .name {
-      font-size: 4rem;
+      font-size: 2.5rem;
+    }
+
+    .subtitle {
+      font-size: 1.1rem;
+    }
+
+    .arrow {
+      font-size: 3rem;
     }
 
 }
