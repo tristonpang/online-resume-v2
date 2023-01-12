@@ -1,0 +1,34 @@
+.contactContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttonWrapper {
+  margin-left: 0;
+}
+
+.button {
+  color: #fff;
+  font-size: 25;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #212121;
+}
+
+.navButton {
+  color: #fff;
+}
+
+@media only screen 
+  and (min-device-width: 200px) 
+  and (max-device-width: 736px) {
+    .button {
+      font-size: 0.5rem;
+    }
+
+
+}

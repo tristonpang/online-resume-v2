@@ -9,8 +9,6 @@ import styled, { keyframes } from 'styled-components';
 
 import {
   Box,
-  createStyles,
-  makeStyles,
   Typography,
 } from '@material-ui/core';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';

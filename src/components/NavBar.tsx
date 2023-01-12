@@ -1,9 +1,11 @@
 import React from 'react';
-import { AppBar, Box, Button, createStyles, IconButton, makeStyles, Slide, Toolbar, Typography, useScrollTrigger } from '@material-ui/core';
+import { AppBar, Box, Button, IconButton, Slide, Toolbar, Typography, useScrollTrigger } from '@material-ui/core';
 import MailIcon from '@material-ui/icons/Mail';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import { Link } from 'react-scroll';
+
+import styles from '../styles/NavBar.module.css';
 
 function AppearOnScroll(props: { children: React.ReactElement }) {
   const { children } = props;
@@ -16,36 +18,11 @@ function AppearOnScroll(props: { children: React.ReactElement }) {
   );
 }
 
-const useStyles = makeStyles(() => createStyles({
-  contactContainer: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  buttonWrapper: {
-    marginLeft: 0,
-  },
-  button: {
-    color: '#fff',
-    fontSize: 25,
-  },
-  toolbar: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    backgroundColor: '#212121',
-    elevation: 3,
-  },
-  navButton: {
-    color: '#fff',
-  }
-}));
-
 const NavBar = () => {
-  const classes = useStyles();
   return (
     <AppearOnScroll>
       <AppBar>
-        <Toolbar className={classes.toolbar}>
+        <Toolbar className={styles.toolbar}>
           <Typography variant="h6">Triston Pang</Typography>
           <Box>
             <Link
@@ -56,7 +33,7 @@ const NavBar = () => {
               offset={-50}
               duration={500}
             >
-              <Button className={classes.navButton}>About</Button>
+              <Button className={styles.navButton}>About</Button>
             </Link>
             <Link
               activeClass="active"
@@ -66,7 +43,7 @@ const NavBar = () => {
               offset={-80}
               duration={500}
             >
-              <Button className={classes.navButton}>Work Experience</Button>
+              <Button className={styles.navButton}>Work Experience</Button>
             </Link>
             <Link
               activeClass="active"
@@ -76,7 +53,7 @@ const NavBar = () => {
               offset={-80}
               duration={500}
             >
-              <Button className={classes.navButton}>Education</Button>
+              <Button className={styles.navButton}>Education</Button>
             </Link>
             <Link
               activeClass="active"
@@ -86,7 +63,7 @@ const NavBar = () => {
               offset={-80}
               duration={500}
             >
-              <Button className={classes.navButton}>Projects</Button>
+              <Button className={styles.navButton}>Projects</Button>
             </Link>
             <Link
               activeClass="active"
@@ -96,18 +73,18 @@ const NavBar = () => {
               offset={-80}
               duration={500}
             >
-              <Button className={classes.navButton}>Proficiencies</Button>
+              <Button className={styles.navButton}>Proficiencies</Button>
             </Link>
           </Box>
-          <Box className={classes.contactContainer}>
-            <IconButton className={classes.buttonWrapper} href='mailto:pang.triston@gmail.com'>
-              <MailIcon className={classes.button} />
+          <Box className={styles.contactContainer}>
+            <IconButton className={styles.buttonWrapper} href='mailto:pang.triston@gmail.com'>
+              <MailIcon className={styles.button} />
             </IconButton>
-            <IconButton className={classes.buttonWrapper} href='https://github.com/tristonpang'>
-              <GitHubIcon className={classes.button} />
+            <IconButton className={styles.buttonWrapper} href='https://github.com/tristonpang'>
+              <GitHubIcon className={styles.button} />
             </IconButton>
-            <IconButton className={classes.buttonWrapper} href='https://www.linkedin.com/in/triston-pang-8a8681170/'>
-              <LinkedInIcon className={classes.button} />
+            <IconButton className={styles.buttonWrapper} href='https://www.linkedin.com/in/triston-pang-8a8681170/'>
+              <LinkedInIcon className={styles.button} />
             </IconButton>
           </Box>
         </Toolbar>

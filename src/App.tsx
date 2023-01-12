@@ -3,6 +3,7 @@ import './App.css';
 import Particles from 'react-tsparticles';
 import type { Container, Engine } from "tsparticles-engine";
 import { loadFull } from "tsparticles";
+import { isMobile } from 'react-device-detect';
 
 import Intro from './components/Intro';
 import Resume from './components/Resume';
@@ -122,7 +123,7 @@ function App() {
           detectRetina: true,
         }}
       />
-      <NavBar />
+      {!isMobile && <NavBar />}
       <div className={classes.contentContainer}>
         <Intro />
         <About />
