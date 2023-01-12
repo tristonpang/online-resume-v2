@@ -2,6 +2,7 @@ import './index.css';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { StylesProvider } from "@material-ui/core/styles";
 
 import {
   BrowserRouter,
@@ -15,12 +16,14 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<App />} />
-        <Route path='/clari' element={<Clari />} />
-      </Routes>
-    </BrowserRouter>
+    <StylesProvider injectFirst>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<App />} />
+          <Route path='/clari' element={<Clari />} />
+        </Routes>
+      </BrowserRouter>
+    </StylesProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

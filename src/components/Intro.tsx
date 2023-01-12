@@ -14,38 +14,7 @@ import {
   Typography,
 } from '@material-ui/core';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
-
-const useStyles = makeStyles(() => createStyles({
-  name: {
-    fontSize: '8em',
-  },
-  subtitle: {
-    fontSize: '2em',
-  },
-  text: {
-    color: '#fff',
-    textAlign: 'center',
-    fontFamily: 'Poppins',
-  },
-  container: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    flexDirection: 'column',
-    height: '100vh',
-  },
-  typistContainer: {
-    height: 20,
-  },
-  arrowButton: {
-    position: 'absolute',
-    top: '85vh',
-  },
-  arrow: {
-    color: '#fff',
-    fontSize: 64,
-  }
-}));
+import styles from '../styles/Intro.module.css';
 
 const flashAnimation = keyframes`
   50% {
@@ -77,15 +46,14 @@ const Intro = () => {
     setTimeout(() => setIsRenderArrow(true), 1500)
   }, []);
 
-  const classes = useStyles();
   return (
-    <Box className={classes.container}>
+    <Box className={styles.container}>
       {isRenderIntro && (<>
-        <FlashingName className={`${classes.text} ${classes.name}`}>Triston Pang</FlashingName>
-        <div className={classes.typistContainer}>
+        <FlashingName className={`${styles.text} ${styles.name} ${styles.name}`}>Triston Pang</FlashingName>
+        <div className={styles.typistContainer}>
           <Typist cursor={{ element: '_' }}>
             <Typist.Delay ms={500} />
-            <Typography className={`${classes.text} ${classes.subtitle}`}>Fullstack Software Developer</Typography>
+            <Typography className={`${styles.text} ${styles.subtitle}`}>Fullstack Software Developer</Typography>
           </Typist>
         </div>
       </>)}
@@ -97,9 +65,9 @@ const Intro = () => {
           smooth={true}
           offset={-50}
           duration={500}
-          className={classes.arrowButton}
+          className={styles.arrowButton}
         >
-          <FadeInArrow className={classes.arrow} />
+          <FadeInArrow className={styles.arrow} />
         </Link>
       )}
     </Box>

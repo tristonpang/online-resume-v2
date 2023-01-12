@@ -1,0 +1,45 @@
+.name {
+  font-size: 8em;
+}
+
+.subtitle {
+  font-size: 2em;
+}
+
+.text {
+  color: #fff;
+  text-align: center;
+  font-family: Poppins;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  margin-bottom: 80px;
+}
+
+.typistContainer {
+  height: 20;
+}
+
+.arrowButton {
+  position: absolute;
+  top: 85vh;
+}
+
+.arrow {
+  color: #fff;
+  font-size: 4rem;
+}
+
+@media only screen 
+  and (min-device-width: 200px) 
+  and (max-device-width: 736px) {
+    .name {
+      font-size: 4rem;
+    }
+
+}
