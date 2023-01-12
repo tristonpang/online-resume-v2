@@ -1,0 +1,19 @@
+.contentContainer {
+  padding-left: 16%;
+  padding-right: 16%;
+}
+
+.particlesContainer {
+  z-index: -10;
+  position: fixed;
+}
+
+@media only screen 
+  and (min-device-width: 200px) 
+  and (max-device-width: 736px) {
+    .contentContainer {
+      padding: 0px 0.5rem;
+    }
+
+
+}

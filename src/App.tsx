@@ -4,13 +4,15 @@ import Particles from 'react-tsparticles';
 import type { Container, Engine } from "tsparticles-engine";
 import { loadFull } from "tsparticles";
 import { isMobile } from 'react-device-detect';
+import CssBaseline from "@material-ui/core/CssBaseline";
+import { createTheme, createStyles, makeStyles, ThemeProvider } from '@material-ui/core';
 
 import Intro from './components/Intro';
 import Resume from './components/Resume';
-import { createTheme, createStyles, makeStyles, ThemeProvider } from '@material-ui/core';
 import About from './components/About';
 import NavBar from './components/NavBar';
-import CssBaseline from "@material-ui/core/CssBaseline";
+
+import styles from './styles/App.module.css';
 
 const useStyles = makeStyles(() => createStyles({
   contentContainer: {
@@ -53,7 +55,7 @@ function App() {
         id="tsparticles"
         init={particlesInit}
         loaded={particlesLoaded}
-        className={classes.particlesContainer}
+        className={styles.particlesContainer}
         options={{
           fullScreen: {
             enable: true
@@ -124,7 +126,7 @@ function App() {
         }}
       />
       {!isMobile && <NavBar />}
-      <div className={classes.contentContainer}>
+      <div className={styles.contentContainer}>
         <Intro />
         <About />
         <Resume />

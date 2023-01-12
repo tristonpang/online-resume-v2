@@ -1,0 +1,63 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 3px;
+  background-color: #212121;
+  padding-left: 16%;
+  padding-right: 16%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.text {
+  color: #fff;
+}
+
+.title {
+  margin-bottom: 24px;
+}
+
+.textContainer {
+  margin-bottom: 16px;
+}
+
+.contactContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.buttonWrapper {
+  margin-left: 16px;
+}
+
+.button {
+  color: #fff;
+  font-size: 35px;
+}
+
+@media only screen 
+  and (min-device-width: 200px) 
+  and (max-device-width: 736px) {
+    .button {
+      font-size: 1.5rem;
+    }
+
+    .title {
+      font-size: 1rem;
+    }
+
+    .text {
+      font-size: 0.9rem;
+    }
+
+    .container {
+      margin-bottom: 2rem;
+      border-radius: 10px;
+    }
+
+
+}
