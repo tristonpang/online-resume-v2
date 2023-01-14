@@ -51,7 +51,7 @@ export const work = [
     image: NusLogo,
     title: 'National University of Singapore',
     subtitle: "Teaching Assistant",
-    duration: 'Jan 2018 - Present',
+    duration: 'Jan 2018 - Dec 2020',
     description: 'I have conducted lessons for two modules in NUS: CS2030 Programming Methodology II and CS2103/T Software Engineering. Tutoring for CS2030 involved preparing lesson materials and conducting lab sessions, while in CS2103/T I was placed in charge of two student teams, and was responsible for the grading and guidance of the software engineering projects that each team was developing. Tutoring is meaningful to me, as it allows me to revise and refine my existing skills, as well as to pass down knowledge and help fellow aspiring developers.',
   },
   {

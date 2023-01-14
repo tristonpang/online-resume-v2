@@ -17,6 +17,7 @@
 
 .title {
   margin-bottom: 24px;
+  color: #fff;
 }
 
 .textContainer {
@@ -47,7 +48,7 @@
     }
 
     .title {
-      font-size: 1rem;
+      font-size: 2rem;
     }
 
     .text {
@@ -57,6 +58,7 @@
     .container {
       margin-bottom: 2rem;
       border-radius: 10px;
+      padding: 3rem 2rem;
     }
 
 

@@ -7,6 +7,8 @@ import {
   Typography,
 } from '@material-ui/core';
 
+import styles from '../styles/EssayCard.module.css';
+
 export interface EssayCardProps {
   title: string;
   subtitle: string;

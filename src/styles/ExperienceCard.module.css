@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 64px;
+}
+
+.headerContainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.image {
+  width: 75%;
+}
+
+.imageContainer {
+  width: 30%;
+}
+
+.titleContainer {
+  width: 70%;
+}
+
+.description {
+  text-align: justify;
+}
+
+@media only screen 
+  and (min-device-width: 200px) 
+  and (max-device-width: 736px) {
+    .description {
+      text-align: start;
+      line-height: 1.6rem;
+    }
+
+}

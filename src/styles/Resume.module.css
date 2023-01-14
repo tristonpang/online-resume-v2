@@ -1,0 +1,25 @@
+.sectionTitle {
+  margin-bottom: 100px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff;
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+
+@media only screen 
+  and (min-device-width: 200px) 
+  and (max-device-width: 736px) {
+    .container {
+      padding: 3rem 2.1rem;
+      border-radius: 5px;
+    }
+
+}

@@ -10,7 +10,7 @@ const About = () => {
   return (
     <Box className={styles.container} id='about'>
       <Box className={styles.textContainer}>
-        <Typography variant='h4' className={`${styles.text} ${styles.title}`}>Hi there!</Typography>
+        <Typography variant='h4' className={styles.title}>Hi there!</Typography>
         <Typography className={styles.text}>
           I am a software engineer with a specialisation in Software Engineering and Database Systems. Besides these fields, I have worked on a range of projects with differing requirements and skill sets.
           I have worked on software in both front-end and back-end developer roles, and have experience in setting up CI/CD pipelines and in some DevOps as well.
