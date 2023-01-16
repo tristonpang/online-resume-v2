@@ -14,11 +14,26 @@
   margin-bottom: 24px;
 }
 
+.image {
+  width: 75%;
+  margin-bottom: 16px;
+}
+
 .title {
   text-align: center;
 }
 
-.image {
-  width: 75%;
-  margin-bottom: 16px;
+.description {
+  margin-top: 16px;
+  text-align: justify;
+}
+
+@media only screen 
+  and (min-device-width: 200px) 
+  and (max-device-width: 736px) {
+    .description {
+      text-align: start;
+      line-height: 1.6rem;
+    }
+
 }

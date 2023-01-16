@@ -9,6 +9,8 @@ import {
 
 import { ExperienceCardProps } from './ExperienceCard';
 
+import styles from '../styles/ProjectCard.module.css';
+
 const useStyles = makeStyles(() => createStyles({
   container: {
     display: 'flex',
@@ -37,11 +39,11 @@ const ProjectCard = (props: ExperienceCardProps) => {
   const { image, title, subtitle, duration, description } = props;
   const classes = useStyles();
   return (
-    <Box className={classes.container}>
-      <img className={classes.image} src={image} alt='' />
-      <Typography variant='h5'><strong>{title}</strong></Typography>
+    <Box className={styles.container}>
+      <img className={styles.image} src={image} alt='' />
+      <Typography className={styles.title} variant='h5'><strong>{title}</strong></Typography>
       <Typography><em>{subtitle}</em>{'  |  ' + duration}</Typography>
-      <Typography className={classes.description} align='justify'>{description}</Typography>
+      <Typography className={styles.description}>{description}</Typography>
     </Box>
   );
 };

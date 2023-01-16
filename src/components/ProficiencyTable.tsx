@@ -1,5 +1,7 @@
 import React from 'react';
-import { createStyles, makeStyles, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@material-ui/core';
+import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@material-ui/core';
+
+import styles from '../styles/ProficiencyTable.module.css';
 
 interface ProficiencyTableProps {
   label: string;
@@ -12,15 +14,8 @@ const levelMapping: { [key: number]: string } = {
   3: 'Proficient',
 }
 
-const useStyles = makeStyles(() => createStyles({
-  container: {
-    marginBottom: 36,
-  },
-}));
-
 const ProficiencyTable = (props: ProficiencyTableProps) => {
   const { label, data } = props;
-  const classes = useStyles();
   const renderDataRows = () => {
     return data.map(dataItem => (
       <TableRow>
@@ -31,7 +26,7 @@ const ProficiencyTable = (props: ProficiencyTableProps) => {
   };
 
   return (
-    <TableContainer elevation={3} component={Paper} className={classes.container}>
+    <TableContainer elevation={3} component={Paper} className={styles.container}>
       <Table aria-label="simple table">
         <TableHead>
           <TableRow>
