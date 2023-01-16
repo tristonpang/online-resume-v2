@@ -3,6 +3,7 @@ import CaptLogo from '../resources/images/capt_logo.png';
 import NocLogo from '../resources/images/noc.png';
 import NebTreeLogo from '../resources/images/nebtree_logo.png';
 import SteadyLogo from '../resources/images/steady_logo.png';
+import TempestLogo from '../resources/images/tempest.jpg';
 import SpanLogo from '../resources/images/span_logo.png';
 import Captslock from '../resources/images/captslock.jpg';
 import Orbital from '../resources/images/intheloop.png';
@@ -33,6 +34,13 @@ export const education = [
 ];
 
 export const work = [
+  {
+    image: TempestLogo,
+    title: 'Tempest',
+    subtitle: "Software Engineer (Backend)",
+    duration: 'Jan 2021 - Present',
+    description: 'Tempest specialises in products focused on internet and data privacy - such as anonymous search, browser, VPN and second-phone apps. I was the first backend engineer hired by the team in charge of Tempest\'s second-phone app - Phoner. There I worked directly under the CTO, who shortly after proceeded to hand over the development and maintenance of the backend to me after deciding to focus on a different product. From there, I spearheaded development of backend features - such as converting our systems to support eSIMs, integrating payment providers, and providing an unlimited payment model system. I also oversaw major software architectural decisions and refactoring, as we moved from monolithic to microservices architecture, as well as a production environment database upgrade and migration. My time at Tempest brought me through some great challenges. While it may have been a trial by fire, I have grown much from being placed in charge of an entire backend system, as well as taking charge of planning and structuring backend architecture as well.'
+  },
   {
     image: SpanLogo,
     title: 'Span.io',
