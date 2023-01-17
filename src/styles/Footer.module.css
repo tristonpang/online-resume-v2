@@ -45,3 +45,13 @@
   font-size: 1rem;
 }
 
+@media only screen 
+  and (min-device-width: 200px) 
+  and (max-device-width: 736px) {
+    .container {
+      height: 16rem;
+      padding-bottom: 2rem;
+    }
+
+}
+

@@ -33,6 +33,15 @@
 .arrow {
   color: #fff;
   font-size: 4rem;
+  transition: 0.2s;
+}
+
+.arrow:hover {
+  color: #909090;
+}
+
+.arrow:active {
+  transform: scale(0.82);
 }
 
 @media only screen 
