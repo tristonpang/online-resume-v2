@@ -11,20 +11,9 @@ import Intro from './components/Intro';
 import Resume from './components/Resume';
 import About from './components/About';
 import NavBar from './components/NavBar';
+import Footer from './components/Footer';
 
 import styles from './styles/App.module.css';
-
-const useStyles = makeStyles(() => createStyles({
-  contentContainer: {
-    paddingLeft: '16%',
-    paddingRight: '16%',
-  },
-  particlesContainer: {
-    zIndex: -10,
-    position: "fixed",
-  }
-
-}));
 
 const theme = createTheme({
   typography: {
@@ -38,7 +27,6 @@ const theme = createTheme({
 });
 
 function App() {
-  const classes = useStyles();
   const particlesInit = useCallback(async (engine: Engine) => {
     console.log(engine);
     await loadFull(engine);
@@ -131,6 +119,7 @@ function App() {
         <About />
         <Resume />
       </div>
+      <Footer />
     </ThemeProvider>
   );
 }

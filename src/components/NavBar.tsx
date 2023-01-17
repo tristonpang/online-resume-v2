@@ -83,7 +83,7 @@ const NavBar = () => {
             <IconButton className={styles.buttonWrapper} href='https://github.com/tristonpang'>
               <GitHubIcon className={styles.button} />
             </IconButton>
-            <IconButton className={styles.buttonWrapper} href='https://www.linkedin.com/in/triston-pang-8a8681170/'>
+            <IconButton className={styles.buttonWrapper} href='https://www.linkedin.com/in/triston-pang/'>
               <LinkedInIcon className={styles.button} />
             </IconButton>
           </Box>

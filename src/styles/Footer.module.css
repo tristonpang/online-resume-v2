@@ -1,0 +1,47 @@
+.container {
+  width: 100%;
+  height: 15rem;
+  background-color: #212121;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+.buttonContainer {
+  margin-bottom: 1.6rem;
+}
+
+.buttonWrapper {
+  padding: 0 1.6rem
+}
+
+.button {
+  color: #fff;
+  font-size: 2rem;
+  transition: 0.2s;
+}
+
+.button:hover {
+  color: #909090;
+}
+
+.button:active {
+  transform: scale(0.82);
+}
+
+.text {
+  color: #fff;
+}
+
+.title {
+  color: #fff;
+  font-size: 1.3rem;
+}
+
+.subtitle {
+  color: #808080;
+  font-size: 1rem;
+}
+

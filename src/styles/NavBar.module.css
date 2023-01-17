@@ -11,6 +11,15 @@
 .button {
   color: #fff;
   font-size: 25px;
+  transition: 0.2s;
+}
+
+.button:hover {
+  color: #909090;
+}
+
+.button:active {
+  transform: scale(0.82);
 }
 
 .toolbar {
@@ -21,6 +30,15 @@
 
 .navButton {
   color: #fff;
+  transition: 0.2s;
+}
+
+.navButton:hover {
+  color: #909090;
+}
+
+.navButton:active {
+  transform: scale(0.82);
 }
 
 @media only screen 
