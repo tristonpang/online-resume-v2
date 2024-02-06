@@ -16,6 +16,7 @@ import FilmLaughPhoto from "../resources/images/claritris_filmlaugh_50.jpg";
 import FirstPhoto from "../resources/images/claritris_first.jpeg";
 import GbtbPhoto from "../resources/images/claritris_gbtb.jpeg";
 import GradPhoto from "../resources/images/claritris_grad.jpeg";
+import KoreaMirrorPhoto from "../resources/images/claritris_koreamirror.jpg";
 import LungsPhoto from "../resources/images/claritris_lungs.jpeg";
 import MilligramPhoto from "../resources/images/claritris_milligram.jpeg";
 import PotteryPhoto from "../resources/images/claritris_pottery.jpeg";
@@ -195,6 +196,11 @@ const reflectionImages = [
   {
     original: Reflection4Photo,
     thumbnail: Reflection4Photo,
+    ...imageDimensions,
+  },
+  {
+    original: KoreaMirrorPhoto,
+    thumbnail: KoreaMirrorPhoto,
     ...imageDimensions,
   },
 ];

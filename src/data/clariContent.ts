@@ -25,8 +25,8 @@
 
 export const clariContent = [
   {
-    title: 'Meet Clari',
-    subtitle: 'My love, my joy, my blessing',
+    title: "Meet Clari",
+    subtitle: "My love, my joy, my blessing",
     content: `
     This is Clari. Clari is someone who means so, so much to me. While my language skills may never do justice to most accurately describe how much Clari means to me, today in this letter I shall try (so do bear with me!).
 
@@ -43,7 +43,7 @@ export const clariContent = [
     I could keep going on with all of these traits and descriptions and make this webpage a thousand kilometres long to scroll, but the main point about Clari is this: I am unbelievably lucky to have found you, Clari. I have found someone whom I would want to walk life with, someone who is so unique to me, so valuable, so irreplaceable (dare I say, non-fungible? heh) so special in my life. I really cannot put it in words to describe it, but I am so so absolutely grateful for you. Not just grateful for all the traits that you have that I described above, but I am so so grateful for who you are in my life. So, so, so grateful that God has put you in my life. I truly love you, so, so much.
     `,
     // galleryItems: [
-    //   AlphabetPhoto, 
+    //   AlphabetPhoto,
     //   BlackWhitePhoto,
     //   BrunchPhoto,
     //   CameraPhoto,
@@ -56,5 +56,18 @@ export const clariContent = [
     //   BdayPhoto,
     //   UmbrellaPhoto,
     // ],
-  }
+  },
+  {
+    title: "Part Two",
+    subtitle: "206 days into marriage",
+    content: `
+      Hello honey! Thought I'd surprise you here with not only a fixed website, but a new little letter to you here. I initially set aside this page for you to remind you how much I cherish you, and how important you are to me, and today I am going to tell you exactly that. 
+      
+      We've been through so much, through the engagement, through the wedding planning, and finally marriage itself, and we are only just getting started. Let me start by saying that I have come to learn and love you so much deeper, that we experience so much deeper joys. I have seen you grow so much, and have come to learn so much more about you (still much more to go), and because of the way God has worked through you I have come to learn much about myself too. While it pains me to see you go through many challenges each day you go to work as an MSW, I too see so much courage, perserverance, hope, and strength as this little squish struggles to wake up every morning and tackle the work day. Each day, even as the work wears you down, I see you grow stronger and tougher, I see you find hope and rest in the smallest of things, and I am so proud of you honey.
+
+      Also can I just take this time to appreciate how even more nonsense you are? The previous letter speaks about some level of nonsense, but I think after marriage I have unlocked the motherlode and it is glorious hehe. I love the way you laugh and giggle when my (some) of my lame jokes hit right, I love the notti-ness and the cheekyness that you have, and I love just how fun you are. And you know what, it is even more of a "take that life" - that you are able to smile and have fun and giggle even though life hits hard. I praise God for that, and I cherish this silly little gem that He has given me.
+
+      I know life hasn't been the rosiest, and in fact it has been just downright a struggle. I know there are times when I don't love you the best and hurt you. But I just want you to know that there is one absolute truth besides God in my life, and that is I love you so much, and I am absolutely thrilled and grateful to be doing life together with you my love. We have such a long way to go, and I am so excited to see where God takes us. Onwards to the many victories still ahead of us - I am ready to kick life's butt with you :) Love you lots my darling.
+    `,
+  },
 ];
