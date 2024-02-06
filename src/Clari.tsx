@@ -1,61 +1,71 @@
-import './App.css'; // TODO: separate css files
-
-import React from 'react';
-
-import Particles from 'react-tsparticles';
+import "./App.css"; // TODO: separate css files
 
 import {
-  createMuiTheme,
-  createStyles,
-  makeStyles,
   ThemeProvider,
-} from '@material-ui/core';
+  createStyles,
+  createTheme,
+  makeStyles,
+} from "@material-ui/core";
+import Particles from "react-tsparticles";
+import { loadFull } from "tsparticles";
+import type { Container, Engine } from "tsparticles-engine";
 
-import ClariAbout from './components/ClariAbout';
-import ClariContent from './components/ClariContent';
-import ClariIntro from './components/ClariIntro';
+import ClariAbout from "./components/ClariAbout";
+import ClariContent from "./components/ClariContent";
+import ClariIntro from "./components/ClariIntro";
 
-// import StarBg from './resources/backgrounds/star-bg-resized.jpg';
+import { useCallback } from "react";
+import styles from "./styles/App.module.css";
 
-const useStyles = makeStyles(() => createStyles({
-  contentContainer: {
-    paddingLeft: '16%',
-    paddingRight: '16%',
-  }
+const useStyles = makeStyles(() =>
+  createStyles({
+    contentContainer: {
+      paddingLeft: "16%",
+      paddingRight: "16%",
+    },
+  })
+);
 
-}));
-
-const theme = createMuiTheme({
+const theme = createTheme({
   typography: {
-    fontFamily: 'Poppins',
+    fontFamily: "Poppins",
   },
-  // overrides: {
-  //   MuiCssBaseline: {
-  //     "@global": {
-  //       body: {
-  //         backgroundImage: `url(${StarBg})`
-  //       }
-  //     }
-  //   }
-  // },
+  palette: {
+    background: {
+      default: "#000",
+    },
+  },
 });
 
-function Clari() { // TODO: change background image to night sky if possible
+function Clari() {
+  const particlesInit = useCallback(async (engine: Engine) => {
+    console.log(engine);
+    await loadFull(engine);
+  }, []);
+
+  const particlesLoaded = useCallback(
+    async (container: Container | undefined) => {
+      await console.log(container);
+    },
+    []
+  );
+
   const classes = useStyles();
   return (
     <ThemeProvider theme={theme}>
       <Particles
         id="tsparticles"
+        init={particlesInit}
+        loaded={particlesLoaded}
+        className={styles.particlesContainer}
         options={{
+          fullScreen: {
+            enable: true,
+          },
           background: {
             color: {
-              value: '#141E30'
+              value: "#141E30",
             },
-            // opacity: 1,
-            // image: './resources/backgrounds/star-bg-resized.jpg'
-          },
-          backgroundMode: {
-            enable: true,
           },
           fpsLimit: 60,
           interactivity: {
@@ -63,21 +73,6 @@ function Clari() { // TODO: change background image to night sky if possible
             events: {
               resize: true,
             },
-            // modes: {
-            //   bubble: {
-            //     distance: 400,
-            //     duration: 2,
-            //     opacity: 0.8,
-            //     size: 40,
-            //   },
-            //   push: {
-            //     quantity: 4,
-            //   },
-            //   repulse: {
-            //     distance: 200,
-            //     duration: 0.4,
-            //   },
-            // },
           },
           particles: {
             color: {
@@ -106,11 +101,6 @@ function Clari() { // TODO: change background image to night sky if possible
             },
             shape: {
               type: "circle",
-              // options: {
-              //   image: {
-              //     src: './resources/icons/star.jpg'
-              //   }
-              // }
             },
             size: {
               random: true,
@@ -120,8 +110,8 @@ function Clari() { // TODO: change background image to night sky if possible
           detectRetina: true,
         }}
       />
-      {/* <NavBar /> */}
-      <div className={classes.contentContainer}>
+
+      <div className={styles.contentContainer}>
         <ClariIntro />
         <ClariAbout />
         <ClariContent />
