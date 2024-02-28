@@ -1,31 +1,29 @@
-import './index.css';
+import "./index.css";
 
-import React from 'react';
-import ReactDOM from 'react-dom';
 import { StylesProvider } from "@material-ui/core/styles";
+import React from "react";
+import ReactDOM from "react-dom";
 
-import {
-  BrowserRouter,
-  Route,
-  Routes,
-} from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import App from './App';
-import Clari from './Clari';
-import reportWebVitals from './reportWebVitals';
+import App from "./App";
+import Clari from "./Clari";
+import reportWebVitals from "./reportWebVitals";
+import SharingBox from "./SharingBox";
 
 ReactDOM.render(
   <React.StrictMode>
     <StylesProvider injectFirst>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<App />} />
-          <Route path='/clari' element={<Clari />} />
+          <Route path="/" element={<App />} />
+          <Route path="/clari" element={<Clari />} />
+          <Route path="/sharing-box" element={<SharingBox />} />
         </Routes>
       </BrowserRouter>
     </StylesProvider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
