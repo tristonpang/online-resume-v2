@@ -38,8 +38,11 @@
 
 /* Style the front side (fallback if image is missing) */
 .flipCardFront {
-  background-color: #bbb;
+  background-color: #b5ffe5;
   color: black;
+  border-color: #000000;
+  border-width: 4px;
+  border-style: solid;
 }
 
 /* Style the back side */

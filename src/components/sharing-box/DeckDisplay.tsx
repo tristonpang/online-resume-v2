@@ -19,7 +19,6 @@ const DeckDisplay = () => {
         <strong>Menu</strong>
       </Typography>
       <FoodMenu />
-      <hr className={styles.divider} />
     </Box>
   );
 };
