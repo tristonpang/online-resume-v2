@@ -1,14 +1,15 @@
-import NusLogo from "../resources/images/nus_logo.png";
+import BlueSgLogo from "../resources/images/bluesg_logo.png";
 import CaptLogo from "../resources/images/capt_logo.png";
-import NocLogo from "../resources/images/noc.png";
+import Captslock from "../resources/images/captslock.jpg";
+import Csc from "../resources/images/csc.jpg";
+import Orbital from "../resources/images/intheloop.png";
 import NebTreeLogo from "../resources/images/nebtree_logo.png";
+import NocLogo from "../resources/images/noc.png";
+import NusLogo from "../resources/images/nus_logo.png";
+import SaltmineLogo from "../resources/images/saltmine_logo.webp";
+import SpanLogo from "../resources/images/span_logo.png";
 import SteadyLogo from "../resources/images/steady_logo.png";
 import TempestLogo from "../resources/images/tempest.jpg";
-import SpanLogo from "../resources/images/span_logo.png";
-import BlueSgLogo from "../resources/images/bluesg_logo.png";
-import Captslock from "../resources/images/captslock.jpg";
-import Orbital from "../resources/images/intheloop.png";
-import Csc from "../resources/images/csc.jpg";
 
 export const education = [
   {
@@ -37,10 +38,17 @@ export const education = [
 
 export const work = [
   {
+    image: SaltmineLogo,
+    title: "Saltmine",
+    subtitle: "Software Engineer II",
+    duration: "Dec 2023 - Present",
+    description: "Saltmine is a workplace management software that helps enterprise companies manage their office spaces and resources. I joined the team as a Software Engineer II, where I am responsible for developing and maintaining the backend services that power the Saltmine platform. Here, I took ownership and lead development of the rebuilding of the back-office microservice. The objective of the rebuild was to redesign the architecture of the microservice, such that it would better accommodate new and more relevant features for clients, and to better store and display certain data structures that these customers would work with. One of the main challenges that I faced here in Saltmine, is the fact that the product, and industry that the product served in, was very niche and can be difficult to relate to. This led to a product and codebase that was incredibly complex. Working in a project which was complex both from a product and technical standpoint taught me how to ask to right questions in order to gather context and to understand not just how to build the product technically, but what I was building the product for. This combined with spearheading software architecture designs to ensure scalability for features, working closely with the product team to understand requirements and translating them into technical specifications, and having to deliver within a short timeframe to meet customer demands, formed an experience which is one of my biggest takeaways from Saltmine.",
+  },
+  {
     image: BlueSgLogo,
     title: "BlueSG",
     subtitle: "Backend Engineer",
-    duration: "Apr 2023 - Present",
+    duration: "Apr 2023 - Dec 2023",
     description:
       "BlueSG is a car-sharing rental service that operates in Singapore that distinguishes itself from its competitors by having a fully electric vehicle fleet, and by being the only point A to B service that exists in Singapore. I joined the team as the 2nd backend engineer as they were expanding their local engineering team to carry out a full backend platform rebuild in order to improve performance and to reduce reliability on existing external software contractors. Throughout my time in BlueSG, I worked under the lead backend engineer, and had close support and mentorship, learning not just how to work fast and to make things work, but to structure my systems in modular and extendible ways to aid development and reduce technical debt in the future. Working as a backend engineer here, I was placed in charge of developing multiple microservices, as well as the creation and deployment of the rental microservice from scratch. Wanting to learn more about TDD and the importance of testing, I also wrote and structured comprehensive unit, integration, end-to-end, and acceptance tests to achieve a minimum of 80% code coverage before any changes would be deployed to staging and production environments. At BlueSG, I truly learnt to think long term, to think about maintainability and modularity, and to factor those considerations in as I made important architectural design decisions as we worked to implement the new backend system.",
   },
